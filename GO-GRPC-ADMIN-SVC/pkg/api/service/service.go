@@ -5,6 +5,7 @@ import (
 	interfaces "admin/service/pkg/usecase/interface"
 	"admin/service/pkg/utils/models"
 	"context"
+	"fmt"
 )
 
 type AdminServer struct {
@@ -26,6 +27,8 @@ func (ad *AdminServer) AdminSignup(ctx context.Context, req *pb.AdminSignupReque
 		Email:     req.Email,
 		Password:  req.Password,
 	}
+
+	fmt.Println("service", adminSignup)
 
 	res, err := ad.adminUseCase.AdminSignUp(adminSignup)
 	if err != nil {

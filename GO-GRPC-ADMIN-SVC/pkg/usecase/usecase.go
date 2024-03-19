@@ -23,6 +23,7 @@ func NewAdminUseCase(repository interfaces.AdminRepository) services.AdminUseCas
 	}
 }
 func (ad *adminUseCase) AdminSignUp(admin models.AdminSignUp) (*domain.TokenAdmin, error) {
+
 	email, err := ad.adminRepository.CheckAdminExistsByEmail(admin.Email)
 	fmt.Println(email)
 	if err != nil {

@@ -4,7 +4,6 @@ go 1.22.0
 
 require (
 	github.com/golang-jwt/jwt v3.2.2+incompatible
-	github.com/hellokvn/go-grpc-product-svc v0.0.0-20220330133446-4976c62ff58c
 	github.com/jinzhu/copier v0.4.0
 	github.com/spf13/viper v1.10.1
 	golang.org/x/crypto v0.18.0
@@ -12,11 +11,9 @@ require (
 	google.golang.org/protobuf v1.32.0
 	gorm.io/driver/postgres v1.3.1
 	gorm.io/gorm v1.23.3
-	honnef.co/go/tools v0.4.7
 )
 
 require (
-	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
@@ -41,7 +38,6 @@ require (
 	golang.org/x/net v0.20.0 // indirect
 	golang.org/x/sys v0.16.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
-	golang.org/x/tools v0.12.1-0.20230825192346-2191a27a6dc5 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240123012728-ef4313101c80 // indirect
 	gopkg.in/ini.v1 v1.66.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect

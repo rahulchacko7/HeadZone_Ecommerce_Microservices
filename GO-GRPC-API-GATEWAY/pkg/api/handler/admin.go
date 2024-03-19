@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -40,6 +41,9 @@ func (ad *AdminHandler) LoginHandler(c *gin.Context) {
 
 func (ad *AdminHandler) AdminSignUp(c *gin.Context) {
 	var adminDetails models.AdminSignUp
+
+	fmt.Println("gateway", adminDetails.Email)
+
 	if err := c.ShouldBindJSON(&adminDetails); err != nil {
 		errs := response.ClientResponse(http.StatusBadRequest, "Details not in correct format", nil, err.Error())
 		c.JSON(http.StatusBadRequest, errs)

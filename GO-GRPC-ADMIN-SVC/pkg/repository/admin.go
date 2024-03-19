@@ -5,6 +5,7 @@ import (
 	interfaces "admin/service/pkg/repository/interface"
 	"admin/service/pkg/utils/models"
 	"errors"
+	"fmt"
 
 	"gorm.io/gorm"
 )
@@ -21,9 +22,14 @@ func NewAdminRepository(DB *gorm.DB) interfaces.AdminRepository {
 
 func (ad *adminRepository) AdminSignUp(adminDetails models.AdminSignUp) (models.AdminDetailsResponse, error) {
 	var model models.AdminDetailsResponse
-	if err := ad.DB.Raw("INSERT INTO admins (firstname,lastname,email,password) VALUES (?, ?, ? ,?) RETURNING id,firstname,lastname,email", adminDetails.Firstname, adminDetails.Lastname, adminDetails.Email, adminDetails.Password).Scan(&model).Error; err != nil {
+
+	fmt.Println("email", model.Email)
+
+	fmt.Println("models", model)
+	if err := ad.DB.Raw("INSERT INTO admins (firstname, lastname, email, password) VALUES (?, ?, ?, ?) RETURNING id, firstname, lastname, email", adminDetails.Firstname, adminDetails.Lastname, adminDetails.Email, adminDetails.Password).Scan(&model).Error; err != nil {
 		return models.AdminDetailsResponse{}, err
 	}
+	fmt.Println("inside", model.Email)
 	return model, nil
 }
 func (ad *adminRepository) CheckAdminExistsByEmail(email string) (*domain.Admin, error) {
