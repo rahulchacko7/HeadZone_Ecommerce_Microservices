@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/config"
-	pb "github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/pb/cart"
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/util/models"
+	"github.com/rahulchacko7/pkg/config"
+	pb "github.com/rahulchacko7/pkg/pb/cart"
+	"github.com/rahulchacko7/pkg/util/models"
 	"google.golang.org/grpc"
 )
 

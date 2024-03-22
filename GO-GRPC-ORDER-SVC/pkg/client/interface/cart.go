@@ -1,6 +1,6 @@
 package interfaces
 
-import "github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/util/models"
+import "github.com/rahulchacko7/pkg/util/models"
 
 type CartClient interface {
 	GetAllItemsFromCart(userID int) ([]models.Cart, error)

@@ -4,13 +4,13 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/config"
-	"github.com/rahulchacko7/GO-GRPC-PRODUCT-SVC/pkg/pb"
+	pb "github.com/rahulchacko7/pkg/pb/product"
+	"github.com/rahulchacko7/pkg/config"
 	"google.golang.org/grpc"
 )
 
 type clientProduct struct {
-	Client pb.ProductClient
+	client pb.ProductClient
 }
 
 func NewProductClient(cfg *config.Config) *clientProduct {
@@ -23,12 +23,12 @@ func NewProductClient(cfg *config.Config) *clientProduct {
 	grpcClient := pb.NewProductClient(grpcConnection)
 
 	return &clientProduct{
-		Client: grpcClient,
+		client: grpcClient,
 	}
 
 }
 func (c *clientProduct) ProductStockMinus(productID, stock int) error {
-	_, err := c.Client.ProductStockMinus(context.Background(), &pb.ProductStockMinusRequest{
+	_, err := c.client.ProductStockMinus(context.Background(), &pb.ProductStockMinusRequest{
 		ID:    int64(productID),
 		Stock: int64(stock),
 	})

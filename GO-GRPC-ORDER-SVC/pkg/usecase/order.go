@@ -3,12 +3,12 @@ package usecase
 import (
 	"errors"
 
-	clienterface "github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/client/interface"
-	interfaces "github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/repository/interface"
-	services "github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/usecase/interface"
 	"github.com/jinzhu/copier"
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/domain"
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/util/models"
+	clienterface "github.com/rahulchacko7/pkg/client/interface"
+	"github.com/rahulchacko7/pkg/domain"
+	interfaces "github.com/rahulchacko7/pkg/repository/interface"
+	services "github.com/rahulchacko7/pkg/usecase/interface"
+	"github.com/rahulchacko7/pkg/util/models"
 )
 
 type orderUseCase struct {

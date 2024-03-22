@@ -1,10 +1,13 @@
 package di
 
 import (
-	server "github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/api"
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/config"
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/db"
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/repository"
+	server "github.com/rahulchacko7/pkg/api"
+	"github.com/rahulchacko7/pkg/api/service"
+	"github.com/rahulchacko7/pkg/client"
+	"github.com/rahulchacko7/pkg/config"
+	"github.com/rahulchacko7/pkg/db"
+	"github.com/rahulchacko7/pkg/repository"
+	"github.com/rahulchacko7/pkg/usecase"
 )
 
 func InitializeAPI(cfg config.Config) (*server.Server, error) {

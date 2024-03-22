@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/config"
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/di"
+	"github.com/rahulchacko7/pkg/config"
+	"github.com/rahulchacko7/pkg/di"
 )
 
 func main() {

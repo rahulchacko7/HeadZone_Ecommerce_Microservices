@@ -3,8 +3,8 @@ package db
 import (
 	"fmt"
 
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/config"
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/domain"
+	"github.com/rahulchacko7/pkg/config"
+	"github.com/rahulchacko7/pkg/domain"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

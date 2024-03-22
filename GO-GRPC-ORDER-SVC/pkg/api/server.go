@@ -3,8 +3,9 @@ package server
 import (
 	"fmt"
 	"net"
-	pb "github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/pb/order"
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/config"
+
+	"github.com/rahulchacko7/pkg/config"
+	pb "github.com/rahulchacko7/pkg/pb/order"
 	"google.golang.org/grpc"
 )
 

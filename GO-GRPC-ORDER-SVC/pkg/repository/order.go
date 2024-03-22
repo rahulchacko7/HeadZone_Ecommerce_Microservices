@@ -1,9 +1,9 @@
 package repository
 
 import (
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/domain"
-	interfaces "github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/repository/interface"
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/util/models"
+	"github.com/rahulchacko7/pkg/domain"
+	interfaces "github.com/rahulchacko7/pkg/repository/interface"
+	"github.com/rahulchacko7/pkg/util/models"
 	"gorm.io/gorm"
 )
 

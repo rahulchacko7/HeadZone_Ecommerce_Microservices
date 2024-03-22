@@ -1,8 +1,8 @@
 package interfaces
 
 import (
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/domain"
-	"github.com/rahulchacko7/GO-GRPC-ORDER-SVC/pkg/util/models"
+	"github.com/rahulchacko7/pkg/domain"
+	"github.com/rahulchacko7/pkg/util/models"
 )
 
 type OrderUseCase interface {
